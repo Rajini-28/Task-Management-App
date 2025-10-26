@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="blue-header">
+      <h2>Task Management System</h2>
+    </div>
+    <h3>Upcoming Tasks</h3>
+    <div>
+      <p>Completed: <span id="completed-tasks">0</span></p>
+      <p>Incomplete: <span id="incomplete-tasks">3</span></p>
+    </div>
+    <div class="tasks">
+      <div class="task">
+        <h4>Task 1: Complete Project Report</h4>
+        <p>Due Date: 15 Nov 2025</p>
+        <p>Priority: High</p>
+        <button class="complete-btn">Mark as Complete</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+      <div class="task">
+        <h4>Task 2: Team Meeting</h4>
+        <p>Date: 10 Nov 2025</p>
+        <p>Time: 2:00 PM</p>
+        <button class="complete-btn">Mark as Complete</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+      <div class="task">
+        <h4>Task 3: Client Follow-up</h4>
+        <p>Due Date: 20 Nov 2025</p>
+        <p>Priority: Medium</p>
+        <button class="complete-btn">Mark as Complete</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </div>
+    <div class="admin-panel">
+      <h4>Admin Panel</h4>
+      <input type="text" placeholder="Task Name">
+      <input type="date" placeholder="Due Date">
+      <select>
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button>Add Task</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
