@@ -67,6 +67,17 @@ document.querySelector('.admin-panel button').addEventListener('click', () => {
     newTask.classList.add('completed');
     newTask.querySelector('.complete-btn').disabled = true; // disable the button after completion
   });
+  const imageInput = document.getElementById('task-image');
+const imageDisplay = document.getElementById('task-image-display');
+
+imageInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  reader.onload = () => {
+    imageDisplay.src = reader.result;
+  };
+  reader.readAsDataURL(file);
+});
 
   // Add event listener to new delete button
   newTask.querySelector('.delete-btn').addEventListener('click', () => {
@@ -78,9 +89,11 @@ document.querySelector('.admin-panel button').addEventListener('click', () => {
     document.getElementById('incomplete-tasks').innerText = taskCount - completedTasks + getCompletedCount();
     newTask.remove();
   });
+  
 
   // Clear input fields
   document.querySelector('.admin-panel input[type="text"]').value = '';
   document.querySelector('.admin-panel input[type="date"]').value = '';
   document.querySelector('.admin-panel select').value = 'low';
 });
+
